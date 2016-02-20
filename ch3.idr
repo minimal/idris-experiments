@@ -24,6 +24,10 @@ my_length : List a -> Nat
 my_length [] = 0
 my_length (x :: xs) = 1 + (my_length xs)
 
+||| length using type var
+my_length_vect : Vect n a -> Nat
+my_length_vect {n} xs = n
+
 my_reverse : List a -> List a
 my_reverse [] = []
 my_reverse (x :: xs) = (my_reverse xs) ++ [x]
