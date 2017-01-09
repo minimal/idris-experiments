@@ -29,8 +29,7 @@ my_length_vect : Vect n a -> Nat
 my_length_vect {n} xs = n
 
 my_reverse : List a -> List a
-my_reverse [] = []
-my_reverse (x :: xs) = (my_reverse xs) ++ [x]
+my_reverse = foldl (flip (::)) []
 
 mymap : (a -> b) -> List a -> List b
 mymap f [] = []
